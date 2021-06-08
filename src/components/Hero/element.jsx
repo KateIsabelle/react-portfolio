@@ -20,6 +20,6 @@ export const Banner = styled.div`
   border-top: 8px solid rgba(245, 245, 245, 0.685);
   border-bottom: 8px solid rgba(245, 245, 245, 0.685);
   box-shadow: 2px;
-  background-image: url("https://res.cloudinary.com/davik/image/upload/v1623193254/react-portfolio/background2_js5ygh.png");
+  background-image: url("https://res.cloudinary.com/davik/image/upload/e_colorize:30,co_rgb:ffc6ff/v1623193254/react-portfolio/background2_js5ygh.png");
   background-size: cover;
 `
