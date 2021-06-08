@@ -23,5 +23,3 @@ export const Banner = styled.div`
   background-image: url("https://res.cloudinary.com/davik/image/upload/v1623193254/react-portfolio/background2_js5ygh.png");
   background-size: cover;
 `
-
-// https://res.cloudinary.com/davik/image/upload/v1623193254/react-portfolio/background2_js5ygh.png
