@@ -4,7 +4,7 @@ import { MainContainer, ButtonHorizontal, ButtonVertical } from './element';
 
 
 
-export default function Button() {
+export default function FancyButton() {
   return (
       <MainContainer>
         Hello
@@ -14,8 +14,4 @@ export default function Button() {
   )
 }
 
-// <button class="button">
-//   Fancy Button
-//   <div class="button__horizontal"></div>
-//   <div class="button__vertical"></div>
-// </button>
+

@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+//button style from https://www.sliderrevolution.com/resources/css-button-hover-effects/
+
 export const MainContainer = styled.button`
   --offset: 10px;
   --border-size: 2px;

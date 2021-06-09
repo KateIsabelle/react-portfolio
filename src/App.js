@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import Hero from './components/Hero';
-import Button1 from './components/Button1'
+import FancyButton from './components/FancyButton'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Hero />
-          <Button1 />
+          <FancyButton />
         </Route>
       </Switch>
     </div>
