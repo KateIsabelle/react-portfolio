@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import { MainContainer } from './element';
+import { MainContainer, ButtonHorizontal, ButtonVertical } from './element';
 
 
 
 export default function Button() {
   return (
       <MainContainer>
+        Hello
+        <ButtonHorizontal />
+        <ButtonVertical />
       </MainContainer>
   )
 }

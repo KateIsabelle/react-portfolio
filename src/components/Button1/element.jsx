@@ -4,6 +4,8 @@ export const MainContainer = styled.button`
   --offset: 10px;
   --border-size: 2px;
 
+  margin: 20px;
+
   display: block;
   position: relative;
   padding: 1.5em 3em;
@@ -26,11 +28,61 @@ export const MainContainer = styled.button`
 `
 
 export const ButtonHorizontal = styled.div`
+  position: absolute;
+  top: var(--horizontal-offset, 0);
+  right: var(--vertical-offset, 0);
+  bottom: var(--horizontal-offset, 0);
+  left: var(--vertical-offset, 0);
+  transition: transform .8s ease;
+  will-change: transform;
 
+  --vertical-offset: calc(var(--offset) * -1);
+  border-top: var(--border-size) solid currentcolor;
+  border-bottom: var(--border-size) solid currentcolor;
+
+  &::before {
+    content: '';
+    position: absolute;
+    border: inherit;
+
+    top: calc(var(--vertical-offset) - var(--border-size));
+    bottom: calc(var(--vertical-offset) - var(--border-size));
+    left: calc(var(--vertical-offset) * -1);
+    right: calc(var(--vertical-offset) * -1);
+  }
+
+  ${MainContainer}:hover & {
+    transform: scaleX(0);
+  }
 `
 
 export const ButtonVertical = styled.div`
-  ${MainContainer}:hover &
+  position: absolute;
+  top: var(--horizontal-offset, 0);
+  right: var(--vertical-offset, 0);
+  bottom: var(--horizontal-offset, 0);
+  left: var(--vertical-offset, 0);
+  transition: transform .8s ease;
+  will-change: transform;
+
+  --horizontal-offset: calc(var(--offset) * -1);
+    border-left: var(--border-size) solid currentcolor;
+    border-right: var(--border-size) solid currentcolor;
+
+  &::before {
+    content: '';
+    position: absolute;
+    border: inherit;
+
+    top: calc(var(--horizontal-offset) * -1);
+    bottom: calc(var(--horizontal-offset) * -1);
+    left: calc(var(--horizontal-offset) - var(--border-size));
+    right: calc(var(--horizontal-offset) - var(--border-size));
+  }
+  
+  ${MainContainer}:hover & {
+    transform: scaleY(0);
+  }
 `
 
 // .button {
@@ -60,31 +112,31 @@ export const ButtonVertical = styled.div`
   
 //   &__horizontal,
 //   &__vertical {
-//     position: absolute;
-//     top: var(--horizontal-offset, 0);
-//     right: var(--vertical-offset, 0);
-//     bottom: var(--horizontal-offset, 0);
-//     left: var(--vertical-offset, 0);
-//     transition: transform .8s ease;
-//     will-change: transform;
+    // position: absolute;
+    // top: var(--horizontal-offset, 0);
+    // right: var(--vertical-offset, 0);
+    // bottom: var(--horizontal-offset, 0);
+    // left: var(--vertical-offset, 0);
+    // transition: transform .8s ease;
+    // will-change: transform;
     
-//     &::before {
-//       content: '';
-//       position: absolute;
-//       border: inherit;
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   border: inherit;
 //     }
 //   }
   
 //   &__horizontal {
-//     --vertical-offset: calc(var(--offset) * -1);
-//     border-top: var(--border-size) solid currentcolor;
-//     border-bottom: var(--border-size) solid currentcolor;
+    // --vertical-offset: calc(var(--offset) * -1);
+    // border-top: var(--border-size) solid currentcolor;
+    // border-bottom: var(--border-size) solid currentcolor;
     
 //     &::before {
-//       top: calc(var(--vertical-offset) - var(--border-size));
-//       bottom: calc(var(--vertical-offset) - var(--border-size));
-//       left: calc(var(--vertical-offset) * -1);
-//       right: calc(var(--vertical-offset) * -1);
+      // top: calc(var(--vertical-offset) - var(--border-size));
+      // bottom: calc(var(--vertical-offset) - var(--border-size));
+      // left: calc(var(--vertical-offset) * -1);
+      // right: calc(var(--vertical-offset) * -1);
 //     }
 //   }
   
@@ -93,15 +145,15 @@ export const ButtonVertical = styled.div`
 //   }
   
 //   &__vertical {
-//     --horizontal-offset: calc(var(--offset) * -1);
-//     border-left: var(--border-size) solid currentcolor;
-//     border-right: var(--border-size) solid currentcolor;
+    // --horizontal-offset: calc(var(--offset) * -1);
+    // border-left: var(--border-size) solid currentcolor;
+    // border-right: var(--border-size) solid currentcolor;
     
 //     &::before {
-//       top: calc(var(--horizontal-offset) * -1);
-//       bottom: calc(var(--horizontal-offset) * -1);
-//       left: calc(var(--horizontal-offset) - var(--border-size));
-//       right: calc(var(--horizontal-offset) - var(--border-size));
+      // top: calc(var(--horizontal-offset) * -1);
+      // bottom: calc(var(--horizontal-offset) * -1);
+      // left: calc(var(--horizontal-offset) - var(--border-size));
+      // right: calc(var(--horizontal-offset) - var(--border-size));
 //     }
 //   }
   
